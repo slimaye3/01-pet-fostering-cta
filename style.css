@@ -1,0 +1,170 @@
+/* Use a modern, easy-to-read font for the whole page */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #e6f7fa; /* Light blue background for the page */
+}
+
+/* Make sure the page takes at least the full height of the viewport */
+html, body {
+  height: 100%;
+}
+
+/* Use a simple layout to push the footer to the bottom */
+body {
+  min-height: 100vh;
+  display: block;
+  position: relative;
+  padding-bottom: 60px; /* Space for the footer */
+  box-sizing: border-box;
+}
+
+/* Style the site header */
+.site-header {
+  background-color: #0077b6; /* Blue from the palette */
+  color: #ffffff;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* Keep the header simple and consistent with the banner */
+}
+
+/* Style the site name */
+.site-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+  letter-spacing: 2px;
+}
+
+/* Style the CTA banner section */
+.cta-banner {
+  background-color: #2bb3c0; /* Teal color for trust and calmness */
+  color: #ffffff;
+  text-align: center;
+  padding-top: 60px;  /* Make the banner tall */
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-image: url('img/cta-bg.jpg'); /* Add background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Add a light overlay to keep text readable */
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(43, 179, 192, 0.6); /* Teal overlay with transparency */
+  z-index: 0;
+}
+
+/* Make sure the content is above the overlay */
+.cta-banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Large main heading */
+.cta-banner h1 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Short description */
+.cta-banner p {
+  font-size: 1.1em;
+  margin-bottom: 30px;
+}
+
+/* Style the call-to-action button */
+.cta-button {
+  display: inline-block;
+  background-color: #0077b6; /* Bright blue for the button */
+  color: #fff;
+  padding: 15px 35px;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  /* Make the button stand out */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #009ec3; /* Slightly lighter blue on hover */
+}
+
+/* Info section below the banner */
+.info-section {
+  width: 90%;
+  max-width: 800px;
+  margin: 40px auto 0 auto; /* Center the section on the page */
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 20px;
+  /* Use basic float for two columns (beginner-friendly) */
+}
+
+/* Image on the left */
+.info-image {
+  width: 48%;
+  max-width: 200px;
+  float: left;
+  margin-right: 4%;
+  border-radius: 6px;
+}
+
+/* Text on the right */
+.info-text {
+  width: 48%;
+  float: left;
+}
+
+/* Clear floats after the section */
+.info-section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the heading and paragraph */
+.info-text h3 {
+  color: #0077b6;
+  margin-top: 0;
+}
+
+.info-text p {
+  color: #222;
+  font-size: 1em;
+  margin-bottom: 0;
+}
+
+/* Style the page footer */
+.site-footer {
+  background-color: #0077b6; /* Same blue as the header */
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 1em;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+/* Style the email link in the footer */
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  text-decoration: underline;
+}
